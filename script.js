@@ -26,3 +26,16 @@ if( guess === 'q'){
 console.log("you won!!!")
 console.log(`You made it in ${attemps} attemps`);
 }
+
+let inst;
+function repeat(greeting, num) {
+    inst = "";
+    for(let i = 0; i < num; i++){
+    inst = greeting.concat(inst);
+    }
+    console.log(inst) 
+    return inst;
+}
+repeat("Hi", 3)
+
+     
