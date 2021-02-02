@@ -1,1 +1,1 @@
-# First-Game-
+# Solitarie-Game
