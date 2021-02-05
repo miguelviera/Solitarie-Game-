@@ -1,73 +1,59 @@
 
-let maximum = parseInt(prompt("Enter your max number:"));
-while (!maximum) {
-    maximum = parseInt(prompt("Enter a valid number!"));
-}
-const targetNum = Math.floor(Math.random() * maximum) + 1;
-console.log(targetNum);
- 
-let guess = prompt("enter your first guess");
-let attemps = 1;
+const body = document.querySelector("body");
+const button = document.querySelector("button");
+const h1 = document.querySelector("h1");
 
-while (parseInt(guess) !== targetNum) {
-    attemps++;
-    if(guess === "q") break;
-      
-    
-    if(guess > targetNum){
-        guess = prompt("To high. Try again!")
-    }else{
-        guess = prompt("To low. Try it again!")
+
+body.style.textAlign = "center";
+
+button.addEventListener("click", function () {
+    const arrColor = [];
+
+    for (let i = 0; i < 3; i++) {
+        arrColor.push(Math.floor(Math.random() * 255) + 1);
     }
-}
-if( guess === 'q'){
-    console.log("You quit!");
-}else{
-console.log("you won!!!")
-console.log(`You made it in ${attemps} attemps`);
-}
 
-let inst;
-function repeat(greeting, num) {
-    inst = "";
-    for(let i = 0; i < num; i++){
-    inst = greeting.concat(inst);
+    const colorNum = `rgb(${arrColor[0]}, ${arrColor[1]}, ${arrColor[2]})`;
+    const total = arrColor[0] + arrColor[1] + arrColor[2];
+    body.style.backgroundColor = colorNum;
+    h1.innerText = colorNum;
+
+    if (total > 200) {
+        h1.style.color = "black";
+    } else {
+        h1.style.color = "white";
     }
-    console.log(inst) 
-    return inst;
-}
-repeat("Hi", 3)
+
+})
 
 
-// let arr = [];
-// let newItem;
-// let deleteItem;
-// let whatToDo;
-// while (true) {
-//     whatToDo = prompt("What would you like to do ?");
-//     if (whatToDo === "new") {
-//         newItem = prompt("Enter a new Todo");
-//         arr.push(newItem)
-//         console.log(`${newItem} added to list`)
-//     }
-    
-//     if (whatToDo === "delete") {
-//         deleteItem = prompt("What item you want to delete?") - 1;
-//         if(Number.isInteger(parseInt(deleteItem)) === true) {
-//         arr.splice(deleteItem, 1);
-//         console.log(`${deleteItem + 1} item deleted`);
-//     }
-//     }   
-//     else if (whatToDo === "list") {
-//         console.log("**********")
-//         for (let i = 0; i < arr.length; i++) {
-//             console.log(`${i+1}: ${arr[i]}`)  
-//         }
-//         console.log("**********")
-//     }
-//     else if(whatToDo === "quit"){
-//         console.log("OK YOU QUIT THE APP!"); break;
-//     }
-// }
 
-     
+
+// button.addEventListener("click", function(){
+//     const firstNum = Math.floor(Math.random() * 255) + 1;
+//     const secondNum = Math.floor(Math.random() * 255) + 1;
+//     const thirdNum = Math.floor(Math.random() * 255) + 1;
+//     const colorNum = `rgb(${firstNum}, ${secondNum}, ${thirdNum})`;
+//     body.style.backgroundColor = colorNum;
+//     h1.innerText = colorNum;
+// })
+
+
+
+// button.addEventListener("click", function(){
+//     let randomColor = changeColor();
+//     body.style.backgroundColor = randomColor;
+//     h1.innerText = randomColor;
+// })
+
+// function changeColor() {
+//         let color = "";
+//     for(let i = 0; i < 3; i++) {
+//         let sub = Math.floor(Math.random() * 256).toString(16);
+//         color += (sub.length == 1 ? "0" + sub : sub);
+//     }
+//     return "#" + color;
+//     }
+
+
+
