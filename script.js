@@ -46,7 +46,7 @@ button.addEventListener("click", function () {
 //     h1.innerText = randomColor;
 // })
 
-
+// Change Color
 // function changeColor() {
 //         let color = "";
 //     for(let i = 0; i < 3; i++) {
