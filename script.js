@@ -42,20 +42,6 @@ button.addEventListener("click", function () {
 
 
 
-// button.addEventListener("click", function(){
-//     let randomColor = changeColor();
-//     body.style.backgroundColor = randomColor;
-//     h1.innerText = randomColor;
-// })
-
-// function changeColor() {
-//         let color = "";
-//     for(let i = 0; i < 3; i++) {
-//         let sub = Math.floor(Math.random() * 256).toString(16);
-//         color += (sub.length == 1 ? "0" + sub : sub);
-//     }
-//     return "#" + color;
-//     }
 
 
 
