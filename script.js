@@ -1,6 +1,4 @@
-const body = document.querySelector("body");
-const button = document.querySelector("button");
-const h1 = document.querySelector("h1");
+
 
 
 body.style.textAlign = "center";
